@@ -69,14 +69,43 @@ const Index = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Заявка отправлена!",
-      description: "Мы свяжемся с вами в течение 3 часов.",
-    });
+    
+    try {
+      const response = await fetch('/send-mail.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Заявка отправлена!",
+          description: "Мы свяжемся с вами в течение 3 часов.",
+        });
+        setFormData({ name: '', company: '', position: '', phone: '', email: '', message: '' });
+      } else {
+        toast({
+          title: "Ошибка отправки",
+          description: "Попробуйте позже или позвоните нам.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Ошибка отправки",
+        description: "Проверьте подключение к интернету.",
+        variant: "destructive",
+      });
+    }
     setIsOpen(false);
-    setFormData({ name: '', company: '', position: '', phone: '', email: '', message: '' });
   };
 
   return (
@@ -867,9 +896,9 @@ const Index = () => {
               <p className="text-sm mb-4">ИНН: 500316027838</p>
               
               <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6 text-xs sm:text-sm">
-                <a href="#" className="hover:text-white transition-colors">Политика конфиденциальности</a>
+                <a href="/assets/privacy-policy.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Политика конфиденциальности</a>
                 <span className="hidden sm:inline">|</span>
-                <a href="#" className="hover:text-white transition-colors">Договор оферты</a>
+                <a href="/assets/oferta.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Договор оферты</a>
               </div>
               
               <p className="text-sm mt-6">© 2025 Все права защищены</p>
