@@ -510,8 +510,330 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* Section 7: Cases and Reviews */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-bank-dark">
+            Проекты в банковском секторе: типовые задачи и эффекты
+          </h2>
+          <p className="text-center text-gray-600 mb-12">(без раскрытия клиента)</p>
+          
+          <div className="space-y-8">
+            <Card className="border-l-4 border-l-bank-blue hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-2xl flex items-center gap-3">
+                  <Icon name="DollarSign" className="text-bank-blue" size={32} />
+                  Кейс 1 — Переговоры по марже
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div>
+                  <p className="font-semibold text-gray-800 mb-1">Контекст:</p>
+                  <p className="text-gray-700">Крупные сделки, финал переговоров.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-red-600 mb-1">Было:</p>
+                  <p className="text-gray-700">Уступки под давлением «чтобы не потерять клиента».</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-bank-blue mb-1">Стало:</p>
+                  <p className="text-gray-700">Алгоритм ответа + переход к обмену уступками.</p>
+                </div>
+                <div className="bg-green-50 p-4 rounded-lg border-l-4 border-success-green">
+                  <p className="font-semibold text-success-green mb-1">Эффект:</p>
+                  <p className="text-gray-800">Частота безусловных уступок снизилась в 2 раза.</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-bank-blue hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-2xl flex items-center gap-3">
+                  <Icon name="Shield" className="text-bank-blue" size={32} />
+                  Кейс 2 — Ковенанты/контроль
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div>
+                  <p className="font-semibold text-gray-800 mb-1">Контекст:</p>
+                  <p className="text-gray-700">Клиенты регулярно давят на смягчение контроля.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-bank-blue mb-1">Стало:</p>
+                  <p className="text-gray-700">Аргументация ценности условий + сценарии «мягкого отказа».</p>
+                </div>
+                <div className="bg-green-50 p-4 rounded-lg border-l-4 border-success-green">
+                  <p className="font-semibold text-success-green mb-1">Эффект:</p>
+                  <p className="text-gray-800">Ковенанты чаще сохраняются, меньше «размытых» условий.</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-bank-blue hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-2xl flex items-center gap-3">
+                  <Icon name="GitPullRequest" className="text-bank-blue" size={32} />
+                  Кейс 3 — Внутренние согласования
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div>
+                  <p className="font-semibold text-gray-800 mb-1">Контекст:</p>
+                  <p className="text-gray-700">Повторные возвраты на доработку от КК/СБ/юристов.</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-bank-blue mb-1">Стало:</p>
+                  <p className="text-gray-700">Шаблон «упаковки» + подготовка аргументации.</p>
+                </div>
+                <div className="bg-green-50 p-4 rounded-lg border-l-4 border-success-green">
+                  <p className="font-semibold text-success-green mb-1">Эффект:</p>
+                  <p className="text-gray-800">Меньше возвратов, быстрее прохождение финальных стадий.</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 8: About Trainer */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-bank-dark">
+            О тренере
+          </h2>
+          
+          <Card className="border-t-4 border-t-bank-blue">
+            <CardContent className="p-8">
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                <div className="flex-shrink-0">
+                  <div className="w-32 h-32 bg-gradient-to-br from-bank-blue to-bank-dark rounded-full flex items-center justify-center">
+                    <Icon name="User" size={64} className="text-white" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-3xl font-bold mb-4 text-bank-dark">Николай Лукша</h3>
+                  <p className="text-xl text-gray-700 mb-6">Бизнес-тренер по переговорам для банковского сектора</p>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div className="flex items-start gap-3">
+                      <Icon name="CheckCircle2" className="text-success-green flex-shrink-0 mt-1" size={20} />
+                      <p className="text-gray-700">20+ лет практики в сложных B2B-переговорах</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="CheckCircle2" className="text-success-green flex-shrink-0 mt-1" size={20} />
+                      <p className="text-gray-700">Фокус: защита условий сделки под давлением + внутренний контур согласований</p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2 border-t pt-6">
+                    <div className="flex items-center gap-3">
+                      <Icon name="Mail" className="text-bank-blue" size={20} />
+                      <a href="mailto:loukcha@gmail.com" className="text-bank-blue hover:underline">loukcha@gmail.com</a>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Icon name="Phone" className="text-bank-blue" size={20} />
+                      <a href="tel:+79267318859" className="text-bank-blue hover:underline">+7 926 731 88 59</a>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Icon name="Globe" className="text-bank-blue" size={20} />
+                      <a href="http://www.investrening.ru" target="_blank" rel="noopener noreferrer" className="text-bank-blue hover:underline">www.investrening.ru</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Section 9: Pricing */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-bank-dark">
+            Стоимость и состав
+          </h2>
+          
+          <Card className="border-2 border-bank-blue shadow-xl">
+            <CardHeader className="bg-gradient-to-r from-bank-blue to-bank-dark text-white">
+              <CardTitle className="text-4xl text-center">300 000 ₽</CardTitle>
+              <CardDescription className="text-center text-gray-200 text-lg">за 1 группу (до 15 человек)</CardDescription>
+            </CardHeader>
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold mb-6 text-bank-dark">Включено:</h3>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-3">
+                  <Icon name="CheckCircle2" className="text-success-green flex-shrink-0 mt-1" size={24} />
+                  <p className="text-lg text-gray-700">Предтренинговая диагностика и адаптация под банк</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="CheckCircle2" className="text-success-green flex-shrink-0 mt-1" size={24} />
+                  <p className="text-lg text-gray-700">2 дня очной практики (16 часов)</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="CheckCircle2" className="text-success-green flex-shrink-0 mt-1" size={24} />
+                  <p className="text-lg text-gray-700">Встроенный модуль по внутреннему контуру</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="CheckCircle2" className="text-success-green flex-shrink-0 mt-1" size={24} />
+                  <p className="text-lg text-gray-700">Материалы/шпаргалки</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="CheckCircle2" className="text-success-green flex-shrink-0 mt-1" size={24} />
+                  <p className="text-lg text-gray-700">Пост-поддержка 2 недели + повторная сессия через месяц</p>
+                </div>
+              </div>
+              
+              <div className="bg-green-50 p-6 rounded-lg border-l-4 border-success-green">
+                <p className="font-semibold text-gray-800 mb-2">Окупаемость (консервативно):</p>
+                <p className="text-gray-700">Если тренинг помогает удерживать условия/маржу хотя бы в 5–10% крупных сделок, эффект перекрывает стоимость в первый месяц после проведения.</p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Section 10: How to Start */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-bank-dark">
+            Как начать
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="text-center border-t-4 border-t-success-green">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-success-green text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  1
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-bank-dark">Оставьте заявку</h3>
+                <p className="text-gray-700">Заполните форму на сайте</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-t-4 border-t-bank-blue">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-bank-blue text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  2
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-bank-dark">Диагностический созвон</h3>
+                <p className="text-gray-700">30 минут: задачи, типовые ситуации, внутренний контур</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center border-t-4 border-t-success-green">
+              <CardContent className="p-6">
+                <div className="w-16 h-16 bg-success-green text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  3
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-bank-dark">Согласование</h3>
+                <p className="text-gray-700">Формат и даты: сбор кейсов → проведение → сопровождение</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 11: FAQ */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-bank-dark">
+            Частые вопросы
+          </h2>
+          
+          <div className="space-y-6">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3">
+                  <Icon name="HelpCircle" className="text-bank-blue flex-shrink-0" size={24} />
+                  Можно ли провести тренинг онлайн?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700">Можно, но предпочтителен очный формат из-за ролевых игр и практических упражнений, которые требуют прямого взаимодействия.</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3">
+                  <Icon name="HelpCircle" className="text-bank-blue flex-shrink-0" size={24} />
+                  Сколько должно быть участников?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700">Оптимум 12–15 человек, минимум 8, максимум 18. Если участников больше — рекомендуется разделить на 2 потока.</p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-start gap-3">
+                  <Icon name="HelpCircle" className="text-bank-blue flex-shrink-0" size={24} />
+                  Не станут ли менеджеры агрессивными после тренинга?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-700">Нет: фокус тренинга на партнёрской позиции «на равных» без конфликта. Цель — защищать условия профессионально, а не агрессивно.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 12: Final CTA */}
       <section className="py-20 bg-gradient-to-br from-bank-dark to-bank-blue text-white">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-center">
+            Обсудите задачи вашего департамента с тренером
+          </h2>
+          <p className="text-xl mb-8 text-gray-200 text-center">
+            На коротком звонке:
+          </p>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8 max-w-3xl mx-auto">
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <Icon name="CheckCircle2" className="text-success-green flex-shrink-0 mt-1" size={20} />
+                <p className="text-lg">Определим 2–3 типовые ситуации, где команда теряет позицию.</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <Icon name="CheckCircle2" className="text-success-green flex-shrink-0 mt-1" size={20} />
+                <p className="text-lg">Скажем, на что делать упор (клиент/ковенанты/внутренний контур).</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <Icon name="CheckCircle2" className="text-success-green flex-shrink-0 mt-1" size={20} />
+                <p className="text-lg">Предложим структуру программы под ваши цели.</p>
+              </div>
+            </div>
+          </div>
+
+          <Card className="max-w-md mx-auto">
+            <CardContent className="p-6">
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <Label htmlFor="final-name" className="text-gray-700">Имя*</Label>
+                  <Input id="final-name" required value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} className="bg-white" />
+                </div>
+                <div>
+                  <Label htmlFor="final-email" className="text-gray-700">Рабочий Email*</Label>
+                  <Input id="final-email" type="email" required value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} className="bg-white" />
+                </div>
+                <div>
+                  <Label htmlFor="final-phone" className="text-gray-700">Телефон*</Label>
+                  <Input id="final-phone" type="tel" required value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} className="bg-white" />
+                </div>
+                <Button type="submit" className="w-full bg-success-green hover:bg-green-600 text-white font-bold py-6">
+                  ОСТАВИТЬ ЗАЯВКУ
+                </Button>
+                <p className="text-sm text-center text-gray-600 italic">*Мы свяжемся с вами в течение 3 часов.</p>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Old Final CTA - Keep for additional conversion point */}
+      <section className="py-20 bg-gradient-to-br from-bank-dark to-bank-blue text-white" style={{display: 'none'}}>
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Готовы внедрить единый стандарт переговоров?
@@ -534,9 +856,21 @@ const Index = () => {
       <footer className="bg-bank-dark text-gray-400 py-12">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">Тренинг «Драйвер сделки»</h3>
-            <p className="mb-2">Единый стандарт переговоров для кредитных менеджеров</p>
-            <p className="text-sm">© 2024 Все права защищены</p>
+            <h3 className="text-2xl font-bold text-white mb-4">КОРПОРАТИВНЫЙ ТРЕНИНГ «ДРАЙВЕР СДЕЛКИ»</h3>
+            <p className="mb-4">Единый стандарт переговоров для кредитных менеджеров</p>
+            
+            <div className="border-t border-gray-600 pt-6 mt-6">
+              <p className="text-sm mb-2">ИП Лукша Николай Леонидович</p>
+              <p className="text-sm mb-4">ИНН: 500316027838</p>
+              
+              <div className="flex justify-center gap-6 text-sm">
+                <a href="#" className="hover:text-white transition-colors">Политика конфиденциальности</a>
+                <span>|</span>
+                <a href="#" className="hover:text-white transition-colors">Договор оферты</a>
+              </div>
+              
+              <p className="text-sm mt-6">© 2025 Все права защищены</p>
+            </div>
           </div>
         </div>
       </footer>
