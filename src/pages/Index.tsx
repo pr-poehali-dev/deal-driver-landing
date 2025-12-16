@@ -20,6 +20,13 @@ const Index = () => {
   });
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollToForm = () => {
+    const formSection = document.getElementById('contact-form');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
@@ -46,50 +53,9 @@ const Index = () => {
               2 дня практики | 80% времени — реальные кейсы вашего банка | Для команд 12–15 человек
             </p>
             
-            <Dialog open={isOpen} onOpenChange={setIsOpen}>
-              <DialogTrigger asChild>
-                <Button size="lg" className="bg-success-green hover:bg-green-600 text-white font-bold text-lg px-8 py-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
-                  ОСТАВИТЬ ЗАЯВКУ
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-md">
-                <DialogHeader>
-                  <DialogTitle>Оставить заявку</DialogTitle>
-                  <DialogDescription>
-                    Мы свяжемся с вами в течение 3 часов и уточним задачу департамента.
-                  </DialogDescription>
-                </DialogHeader>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <Label htmlFor="name">Имя*</Label>
-                    <Input id="name" required value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} />
-                  </div>
-                  <div>
-                    <Label htmlFor="company">Банк/Компания*</Label>
-                    <Input id="company" required value={formData.company} onChange={(e) => setFormData({...formData, company: e.target.value})} />
-                  </div>
-                  <div>
-                    <Label htmlFor="position">Должность*</Label>
-                    <Input id="position" required value={formData.position} onChange={(e) => setFormData({...formData, position: e.target.value})} />
-                  </div>
-                  <div>
-                    <Label htmlFor="phone">Телефон*</Label>
-                    <Input id="phone" type="tel" required value={formData.phone} onChange={(e) => setFormData({...formData, phone: e.target.value})} />
-                  </div>
-                  <div>
-                    <Label htmlFor="email">Email*</Label>
-                    <Input id="email" type="email" required value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} />
-                  </div>
-                  <div>
-                    <Label htmlFor="message">Комментарий</Label>
-                    <Textarea id="message" value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})} />
-                  </div>
-                  <Button type="submit" className="w-full bg-success-green hover:bg-green-600">
-                    Отправить заявку
-                  </Button>
-                </form>
-              </DialogContent>
-            </Dialog>
+            <Button size="lg" onClick={scrollToForm} className="bg-success-green hover:bg-green-600 text-white font-bold text-lg px-8 py-6 rounded-lg shadow-lg hover:shadow-xl transition-all">
+              ОСТАВИТЬ ЗАЯВКУ
+            </Button>
             
             <p className="text-sm mt-4 text-gray-300 italic">
               *Мы свяжемся с вами в течение 3 часов и уточним задачу департамента.
@@ -190,13 +156,9 @@ const Index = () => {
           </p>
           
           <div className="text-center mt-8">
-            <Dialog open={isOpen} onOpenChange={setIsOpen}>
-              <DialogTrigger asChild>
-                <Button size="lg" className="bg-bank-blue hover:bg-blue-700 text-white font-bold">
-                  ОСТАВИТЬ ЗАЯВКУ
-                </Button>
-              </DialogTrigger>
-            </Dialog>
+            <Button size="lg" onClick={scrollToForm} className="bg-bank-blue hover:bg-blue-700 text-white font-bold">
+              ОСТАВИТЬ ЗАЯВКУ
+            </Button>
           </div>
         </div>
       </section>
@@ -807,7 +769,7 @@ const Index = () => {
             </div>
           </div>
 
-          <Card className="max-w-md mx-auto">
+          <Card className="max-w-md mx-auto" id="contact-form">
             <CardContent className="p-6">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
